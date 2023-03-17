@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Everything's for sale!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <style>
+    </style>
+    <script defer src="index.js"></script>
+    <body>
+        <div id="intro">
+            <h1>Great deals on like-new everyday items!</h1>
+            <p>Hi there! Welcome to our for-sale website! I'm glad you found us. We are moving out of Seattle, and have several common household items that we are trying to find a new home for. Please feel free to browse our wares here. All items have been treated with love and care, and most have not been used very much at all.  </p>
+            <p>Been wanting to finally get that new TV without shelling out a ton of money? Or maybe something not so big, like a printer, to make copies of schoolwork to practice? We've got lots of things to offer to anyone, with the goal of saving you some cash while getting all the same value of buying it new.</p>
+            <p>We are located in the Seattle area, so pickup can be arranged the same day that you inquire about something you like. Likely, you are here because you scanned a QR code you saw around. To get in touch, it's simple as clicking the "Request Item" button next to any of the products you see. This will open a form with 2 boxes, one for any comments you'd like to mention, and one for a e-mail address which we can reach you at. </p>
+            <p>You don't need to provide your name, but you can if you wish in the comments box. <b>Please leave an email address that you <b>check regularly, as we will respond to your request fast!</b></p>
+            <h3>Scroll down to see all of our items, request as many as you'd like!</h3>
+        </div>
+
+        <hr />
+
+        <div class="hidden" id="form-container">
+            <form id="request-form" method="post" action="https://getform.io/f/a4308184-9924-41ec-9ab1-9582716a2fee">
+                <label for="form-item-name">Item Name: </label><br>
+                <input required type="text" id="form-item-name" name="Item Name"><br><br>
+                <label for="form-item-email">Return E-mail Address: </label><br>
+                <input required type="email" id="form-item-email" name="Return Address"><br><br>
+                <label for="form-comments" >Comments: </label><br>
+                <textarea id="form-comments" name="Additional Comments"></textarea><br><br>
+                <input type="submit" value="Send Request">
+            </form>
+            <hr />
+        </div>
+
+        <div id="items-container">
+            <div class="item">
+                <h1 class="item-name">60 in LG LCD TV</h1>
+                <img class="item-image" src="assets/placeholder.jpg" alt="item description">
+                <p class="item-description">Item description here</p>
+                <p class="item-tags">Tags here (Appliance, electronic, organization)</p>
+                <button class="request-btn">Request Item!</button>
+            </div>
+            <div class="item">
+                <h1 class="item-name">Epson WF-4833</h1>
+                <img class="item-image" src="assets/placeholder.jpg" alt="item description">
+                <p class="item-description">Item description here</p>
+                <p class="item-tags">Tags here (Appliance, electronic, organization)</p>
+                <button class="request-btn">Request Item!</button>
+            </div>
+            <div class="item">
+                <h1 class="item-name">Bookcase</h1>
+                <img class="item-image" src="assets/placeholder.jpg" alt="item description">
+                <p class="item-description">Item description here</p>
+                <p class="item-tags">Tags here (Appliance, electronic, organization)</p>
+                <button class="request-btn">Request Item!</button>
+            </div>
+            <div class="item">
+                <h1 class="item-name">Small floor shelves</h1>
+                <img class="item-image" src="assets/placeholder.jpg" alt="item description">
+                <p class="item-description">Item description here</p>
+                <p class="item-tags">Tags here (Appliance, electronic, organization)</p>
+                <button class="request-btn">Request Item!</button>
+            </div>
+            <div class="item">
+                <h1 class="item-name">Medium sized basket</h1>
+                <img class="item-image" src="assets/placeholder.jpg" alt="item description">
+                <p class="item-description">Item description here</p>
+                <p class="item-tags">Tags here (Appliance, electronic, organization)</p>
+                <button class="request-btn">Request Item!</button>
+            </div>
+        </div>
+    </body>
+</html> 
