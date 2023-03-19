@@ -10,23 +10,37 @@
     <body>
         <div id="intro">
             <h1>Great deals on like-new everyday items!</h1>
-            <p>Hi there! Welcome to our for-sale website! I'm glad you found us. We are moving out of Seattle, and have several common household items that we are trying to find a new home for. Please feel free to browse our wares here. All items have been treated with love and care, and most have not been used very much at all.  </p>
-            <p>Been wanting to finally get that new TV without shelling out a ton of money? Or maybe something not so big, like a printer, to make copies of schoolwork to practice? We've got lots of things to offer to anyone, with the goal of saving you some cash while getting all the same value of buying it new.</p>
-            <p>We are located in the Seattle area, so pickup can be arranged the same day that you inquire about something you like. Likely, you are here because you scanned a QR code you saw around. To get in touch, it's simple as clicking the "Request Item" button next to any of the products you see. This will open a form with 2 boxes, one for any comments you'd like to mention, and one for a e-mail address which we can reach you at. </p>
-            <p>You don't need to provide your name, but you can if you wish in the comments box. <b>Please leave an email address that you <b>check regularly, as we will respond to your request fast!</b></p>
-            <h3>Scroll down to see all of our items, request as many as you'd like!</h3>
+
+
+            <p>Hi there, welcome to our for-sale website! I'm glad you found us.</p>
+
+
+            <p>We are moving out of Seattle, and are trying to find a new home for all our like-new, household items! All items have been treated with love and care, and most have not been used very much at all.</p>
+
+
+            <p>All items are cash only, and must be picked up.</p>
+
+
+
+            <p>To make it simple for you, we’ve listed all items, with pictures, dimensions, and prices. If you see something you like, click the "Request Item" button next to any of the products to open an email form. From there, you can ask about buying the item! Please leave an email address so we can respond back to you.</p>
+
+
+            <p>Scroll down to see all of our items and request as many as you'd like. We are happy to do a bundle if you are interested in multiple items, just ask!</p>
         </div>
 
         <hr />
 
         <div class="hidden" id="form-container">
-            <form id="request-form" method="post" action="https://getform.io/f/a4308184-9924-41ec-9ab1-9582716a2fee">
+            <div id="modal" class="modal hidden">
+                <p>Thanks for requesting an item, we'll be with you within 1 business day!</p>
+            </div>
+            <form id="request-form">
                 <label for="form-item-name">Item Name: </label><br>
-                <input required type="text" id="form-item-name" name="Item Name"><br><br>
+                <input disabled required type="text" id="form-item-name" name="form-item-name"><br><br>
                 <label for="form-item-email">Return E-mail Address: </label><br>
-                <input required type="email" id="form-item-email" name="Return Address"><br><br>
+                <input required type="email" id="form-item-email" name="form-item-email"><br><br>
                 <label for="form-comments" >Comments: </label><br>
-                <textarea id="form-comments" name="Additional Comments"></textarea><br><br>
+                <textarea id="form-comments" name="form-comments"></textarea><br><br>
                 <input type="submit" value="Send Request">
             </form>
             <hr />
