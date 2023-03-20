@@ -37,14 +37,34 @@ body {
 }
 
 .item-image {
-    width: 300px;
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
     object-fit: contain;
 }
 
 .item {
     margin: 1rem;
+    text-align: center;
 }
 
+.num-cont {
+    display: block;
+    margin: 1em;
+}
+
+.img-btns {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.img-btn {
+    margin: 0 10px;
+}
+
+.img-num {
+    margin: 5px;
+}
 .request-btn {
     margin: 0 auto;
     font-size: 1rem;
@@ -52,8 +72,14 @@ body {
     padding: 0.5rem;
 }
 
+#intro {
+    font-family: Tahoma, Verdana, sans-serif;
+    color: #6B99E5;
+}
+
 #intro h1, .item-name {
     text-align: center;
+    font-family: Tahoma, Verdana, sans-serif;
 }
 
 @media (max-width: 500px) {
