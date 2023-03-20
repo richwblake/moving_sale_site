@@ -47,13 +47,13 @@ attachSubmitEventListenerToForm = ev => {
         // PRODUCTION ENDPOINT
         fetch("https://wills.fyi/api/sendmsg", config)
             .then(resp => resp.json())
-            .then(json => console.log("success", json))
+            .then(json => g("success", json))
             .catch(console.error);
 
         // DEVELOPMENT ENDOPOINT
         // fetch("http://localhost:8080/sendmsg", config)
         //     .then(resp => resp.json())
-        //     .then(json => console.log("success", json))
+        //     .then(json => g("success", json))
         //     .catch(console.error);
         form.reset();
         form.classList.add("hidden");
@@ -145,7 +145,6 @@ const addListenersToNavBtns = (left, right, item, img, currentNum) => {
         } else {
             currIndex -= 1;
         }
-        console.log(`${item.name} image ${currIndex + 1}`);
         currentNum.textContent = currIndex + 1;
         img.src = "assets/" + item.images[currIndex] + ".jpg"; 
     });
@@ -157,7 +156,6 @@ const addListenersToNavBtns = (left, right, item, img, currentNum) => {
         } else {
             currIndex += 1;
         }
-        console.log(`${item.name} image ${currIndex + 1}`);
         currentNum.textContent = currIndex + 1;
         img.src = "assets/" + item.images[currIndex] + ".jpg"; 
     });

@@ -69,6 +69,7 @@ body {
 }
 
 .img-btn {
+    touch-action: manipulation;
     margin: 0 10px;
     width: 3rem;
     font-size: 0.9rem;
