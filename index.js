@@ -113,11 +113,11 @@ const constructDOMElementFromItem = item => {
     const leftButton = document.createElement("button");
     leftButton.id = "left";
     leftButton.classList.add("img-btn");
-    leftButton.textContent = "<=";
+    leftButton.textContent = "⇦";
     const rightButton = document.createElement("button");
     rightButton.id = "right";
     rightButton.classList.add("img-btn");
-    rightButton.textContent = "=>";
+    rightButton.textContent = "⇨";
 
     // Assemble scroller buttons for image
     addListenersToNavBtns(leftButton, rightButton, item, itemImage, currentNum);
@@ -178,7 +178,7 @@ const flashModal = () => {
     setTimeout(() => {
         modal.classList.add("hidden");
         formContainer.classList.add("hidden");
-    }, 3000);
+    }, 8000);
 };
 
 const init = () => {

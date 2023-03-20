@@ -20,10 +20,10 @@
 
         <hr />
 
-        <div class="hidden" id="form-container">
             <div id="modal" class="modal hidden">
-                <p>Thanks for requesting an item, we'll be with you within 1 business day!</p>
+                <p>Thanks for requesting an item, we'll be with you soon!</p>
             </div>
+        <div class="hidden" id="form-container">
             <form id="request-form">
                 <label for="form-item-name">Item Name: </label><br>
                 <input disabled required type="text" id="form-item-name" name="form-item-name"><br><br>
@@ -31,7 +31,7 @@
                 <input required type="email" id="form-item-email" name="form-item-email"><br><br>
                 <label for="form-comments" >Comments: </label><br>
                 <textarea id="form-comments" name="form-comments"></textarea><br><br>
-                <input type="submit" value="Send Request">
+                <input id="submit-btn" type="submit" value="Send Request">
             </form>
             <hr />
         </div>
