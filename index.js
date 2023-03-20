@@ -63,9 +63,9 @@ attachSubmitEventListenerToForm = ev => {
 
 const getItems = async () => {
     // Production
-    const resp = await fetch("https://wills.fyi/api/items");
+    // const resp = await fetch("https://wills.fyi/api/items");
     // Development
-    // const resp = await fetch("http:/localhost:8080/items");
+    const resp = await fetch("http:/localhost:8080/items");
 
     const json = await resp.json();
     const dom_items = json.items.map(item => {
@@ -130,12 +130,18 @@ const constructDOMElementFromItem = item => {
     itemDesc.classList.add("item-description");
     itemDesc.textContent = item.description;
 
+    const itemPrice = document.createElement("p");
+    itemPrice.innerText = `Price: ${item.price}`;
+    itemPrice.style.fontWeight = "bold";
+    // TODO:= Relate itemPrice element to price property from API
+
+
     const requestBtn = document.createElement("button");
     requestBtn.classList.add("request-btn");
     requestBtn.textContent = "Request Item!";
 
     // Assemble DOM element
-    itemDiv.append(itemHeader, itemImage, imgBtnDiv, itemDesc, requestBtn);
+    itemDiv.append(itemHeader, itemImage, imgBtnDiv, itemDesc, itemPrice, requestBtn);
 
     return itemDiv;
 };
