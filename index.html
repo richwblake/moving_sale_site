@@ -9,34 +9,42 @@
     </style>
     <script defer src="index.js"></script>
     <body>
-        <div id="intro">
-            <h1>Great deals on like-new everyday items!</h1>
-            <p>Hi there, welcome to our for-sale website! I'm glad you found us.</p>
-            <p>We are moving out of Seattle, and are trying to find a new home for all our like-new, household items! All items have been treated with love and care, and most have not been used very much at all.</p>
-            <p>All items are <b>cash and venmo</b> only, and must be picked up.</p>
-            <p>We’ve listed all items with pictures, dimensions, and prices. If you see something you like, click the "Request Item" button next to any of the products to open an email form. From there, you can ask about buying the item! Please leave an email address so we can respond back to you.</p>
-            <p>Scroll down to see all of our items and request as many as you'd like. We are happy to do a bundle if you are interested in multiple items, just ask!</p>
-        </div>
+        <header>
+            <div id="main-header">                                                                                         
+                <span><img class="banner-img" src="assets/itmustgo_banner.png">
+            </div>
+        </header>
 
-        <hr />
+        <div class="content">
+            <div id="intro">
+                <h1>Great deals on like-new everyday items!</h1>
+                <p>Hi there, welcome to our for-sale website! I'm glad you found us.</p>
+                <p>We are moving out of Seattle, and are trying to find a new home for all our like-new, household items! All items have been treated with love and care, and most have not been used very much at all.</p>
+                <p>All items are <b>cash and venmo</b> only, and must be picked up.</p>
+                <p>We’ve listed all items with pictures, dimensions, and prices. If you see something you like, click the "Request Item" button next to any of the products to open an email form. From there, you can ask about buying the item! Please leave an email address so we can respond back to you.</p>
+                <p>Scroll down to see all of our items and request as many as you'd like. We are happy to do a bundle if you are interested in multiple items, just ask!</p>
+            </div>
+
+            <hr />
 
             <div id="modal" class="modal hidden">
                 <p>Thanks for requesting an item, we'll be with you soon!</p>
             </div>
-        <div class="hidden" id="form-container">
-            <form id="request-form">
-                <label for="form-item-name">Item Name: </label><br>
-                <input disabled required type="text" id="form-item-name" name="form-item-name"><br><br>
-                <label for="form-item-email">Return E-mail Address: </label><br>
-                <input required type="email" id="form-item-email" name="form-item-email"><br><br>
-                <label for="form-comments" >Comments: </label><br>
-                <textarea id="form-comments" name="form-comments"></textarea><br><br>
-                <input id="submit-btn" type="submit" value="Send Request">
-            </form>
-            <hr />
-        </div>
+            <div class="hidden" id="form-container">
+                <form id="request-form">
+                    <label for="form-item-name">Item Name: </label><br>
+                    <input disabled required type="text" id="form-item-name" name="form-item-name"><br><br>
+                    <label for="form-item-email">Return E-mail Address: </label><br>
+                    <input required type="email" id="form-item-email" name="form-item-email"><br><br>
+                    <label for="form-comments" >Comments: </label><br>
+                    <textarea id="form-comments" name="form-comments"></textarea><br><br>
+                    <input id="submit-btn" type="submit" value="Send Request">
+                </form>
+                <hr />
+            </div>
 
-        <div id="items-container">
+            <div id="items-container">
+            </div>
         </div>
     </body>
 </html> 
