@@ -133,7 +133,6 @@ const constructDOMElementFromItem = item => {
     const itemPrice = document.createElement("p");
     itemPrice.innerText = `Price: ${item.price}`;
     itemPrice.style.fontWeight = "bold";
-    // TODO:= Relate itemPrice element to price property from API
 
 
     const requestBtn = document.createElement("button");
