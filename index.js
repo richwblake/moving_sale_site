@@ -35,6 +35,7 @@ attachSubmitEventListenerToForm = ev => {
             item_name: ev.target["form-item-name"].value,
             return_addr: ev.target["form-item-email"].value,
             comment: ev.target["form-comments"].value,
+            s_password: ev.target.s_password.value,
         };
 
         const config = {
@@ -47,13 +48,12 @@ attachSubmitEventListenerToForm = ev => {
         // PRODUCTION ENDPOINT
         fetch("https://wills.fyi/api/sendmsg", config)
             .then(resp => resp.json())
-            .then(json => g("success", json))
             .catch(console.error);
 
         // DEVELOPMENT ENDOPOINT
         // fetch("http://localhost:8080/sendmsg", config)
         //     .then(resp => resp.json())
-        //     .then(json => g("success", json))
+        //     .then(json => console.log("success", json))
         //     .catch(console.error);
         form.reset();
         form.classList.add("hidden");
