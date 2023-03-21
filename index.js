@@ -63,9 +63,9 @@ attachSubmitEventListenerToForm = ev => {
 
 const getItems = async () => {
     // Production
-    const resp = await fetch("https://wills.fyi/api/items");
+    //const resp = await fetch("https://wills.fyi/api/items");
     // Development
-    // const resp = await fetch("http:/localhost:8080/items");
+    const resp = await fetch("http:/localhost:8080/items");
 
     const json = await resp.json();
     const dom_items = json.items.map(item => {

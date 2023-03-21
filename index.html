@@ -2,13 +2,17 @@
 <html lang="en">
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="assets/itmustgo.ico">
-    <title>Everything's for sale!</title>
+    <title>DEVELOPMENT</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="index.css">
-    <style>
-    </style>
     <script defer src="index.js"></script>
     <body>
+        <!-- Development banner, remove for production -->
+        <div id="Dev banner" style="text-align:center; color:blue; padding:5px; background:red;">
+            <h1 style="color:blue"><b><u>DEVELOPMENT PAGE</u></b></h1>
+        </div>
+        <!-- END DEVELOPER BANNER -->
+
         <div id="intro">
             <h1>Great deals on like-new everyday items!</h1>
             <p>Hi there, welcome to our for-sale website! I'm glad you found us.</p>
@@ -20,9 +24,9 @@
 
         <hr />
 
-            <div id="modal" class="modal hidden">
-                <p>Thanks for requesting an item, we'll be with you soon!</p>
-            </div>
+        <div id="modal" class="modal hidden">
+            <p>Thanks for requesting an item, we'll be with you soon!</p>
+        </div>
         <div class="hidden" id="form-container">
             <form id="request-form">
                 <label for="form-item-name">Item Name: </label><br>
