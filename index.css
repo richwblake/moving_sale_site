@@ -113,6 +113,9 @@ header {
         width: 95%;
         margin: 0 auto;
     }
+    header {
+        text-align: center;
+    }   
 }
 
 @media (min-width: 500px) {
