@@ -187,7 +187,13 @@ const flashModal = () => {
     }, 8000);
 };
 
+const printDevMessage = () => {
+    console.log("Built in a few days by @richwblake(github)");
+    console.log("%cPlease reach out using the request form if you need any web job done correctly and quickly.", 'color: blue; text-decoration: underline;');
+};
+
 const init = () => {
+    printDevMessage();
     attachSubmitEventListenerToForm();
     getItems();
 };
