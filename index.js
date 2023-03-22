@@ -19,8 +19,7 @@ const fillFormWithRequestedItem = itemName => {
     scrollToForm();
 };
 
-const scrollToForm = () => {
-    const offset = 50;
+const scrollToForm = (offset = 50) => {
     const formPosition = formContainer.getBoundingClientRect().top;
     const offsetPosition = formPosition + window.pageYOffset - offset;
 
@@ -58,6 +57,7 @@ attachSubmitEventListenerToForm = ev => {
         form.reset();
         form.classList.add("hidden");
         flashModal();
+        scrollToForm(150);
     }); 
 };
 
