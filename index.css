@@ -15,6 +15,28 @@ body {
     margin: 0 auto;
 }
 
+.toggle-filter {
+    font-size: 1rem;
+    margin: 0 auto;
+    color: white;
+    background-color: #6B99E5;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: 0;
+}
+
+.toggle-filter {
+    margin: 1rem auto;
+}
+
+.filter {
+    border: 1px solid black;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 .banner-img {
     height: 2.5rem;
     object-fit: contain;
@@ -114,9 +136,16 @@ header {
         width: 95%;
         margin: 0 auto;
     }
+    
     header {
         text-align: center;
     }   
+
+    .radio {
+        display: block;
+        margin: 0.7rem;
+    }
+
 }
 
 @media (min-width: 500px) {

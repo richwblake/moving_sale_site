@@ -1,6 +1,7 @@
 const formContainer = document.getElementById("form-container");
 const form = document.getElementById("request-form");
-const items = [];
+let items = [];
+let currentFilter = "all";
 
 const attachListenerToRequestBtns = () => {
     const btns = document.querySelectorAll(".request-btn");
@@ -9,6 +10,30 @@ const attachListenerToRequestBtns = () => {
         btn.addEventListener("click", () => {
             fillFormWithRequestedItem(btn.parentElement.firstElementChild.textContent);
         });
+    });
+};
+
+const attachListenersToRadioButtons = () => {
+    const radios = document.querySelectorAll(".radio-btn");
+    radios.forEach(r => r.addEventListener('click', handleFilterClick));
+};
+
+const handleFilterClick = e => {
+    currentFilter = e.target.value;
+    refreshAndAppendElements();
+};
+
+const attachListenerToFilterButton = () => {
+    const btn = document.getElementById("toggle-filter");
+    const filter = document.getElementById("filter");
+    btn.addEventListener('click', () => {
+        if (btn.textContent === "Show filters") {
+            btn.textContent = "Hide filters";
+            filter.classList.remove("hidden");
+        } else {
+            btn.textContent = "Show filters";
+            filter.classList.add("hidden");
+        }
     });
 };
 
@@ -67,13 +92,23 @@ const getItems = async () => {
     // Development
     // const resp = await fetch("http:/localhost:8080/items");
 
-    const json = await resp.json();
-    const dom_items = json.items.map(item => {
+    const items_json = await resp.json();
+    items = items_json.items;
+    refreshAndAppendElements();
+};
+
+const refreshAndAppendElements = () => {
+    const itemContainer = document.getElementById("items-container");
+    itemContainer.textContent = "";
+
+    const filteredItems = items.filter(i => i.cat === currentFilter || currentFilter === "all");
+    console.log(filteredItems);
+
+    const dom_items = filteredItems.map(item => {
         return constructDOMElementFromItem(item);
     });
 
     dom_items.forEach(item => {
-        const itemContainer = document.getElementById("items-container");
         itemContainer.append(item);
     });
     attachListenerToRequestBtns();
@@ -195,6 +230,8 @@ const printDevMessage = () => {
 const init = () => {
     printDevMessage();
     attachSubmitEventListenerToForm();
+    attachListenerToFilterButton();
+    attachListenersToRadioButtons();
     getItems();
 };
 
